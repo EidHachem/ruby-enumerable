@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Enumerable module that includes all?, any?, and filter methods
 module MyEnumerable
   def all?
