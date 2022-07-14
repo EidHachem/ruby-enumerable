@@ -1,5 +1,7 @@
-require_relative 'myenumerable.rb'
+# frozen_string_literal: true
 
+require_relative 'my_enumerable'
+# My list class that creates a list
 class MyList
   def initialize(*args)
     @list = args
@@ -11,17 +13,3 @@ class MyList
     @list.each { |el| yield(el) if block_given? }
   end
 end
-
-# Create list
-list = MyList.new(1, 2, 3, 4)
-
-# Test all?
-puts list.all? { |e| e < 5 }
-puts list.all? { |e| e > 5 }
-
-# Test any?
-puts list.any? { |e| e == 2 }
-puts list.any? { |e| e == 5 }
-
-# Test filter
-print list.filter { |e| e.even? }
